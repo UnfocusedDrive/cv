@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/UnfocusedDrive/cv#readme",
   "dependencies": {
-    "@nurvus/spawn": "git+https://github.com/UnfocusedDrive/Spawn.git#master"
+    "@nurvus/spawn": "git+https://github.com/UnfocusedDrive/Spawn.git#master",
+    "particleground": "git://github.com/UnfocusedDrive/particleground.git#master"
   }
 }
