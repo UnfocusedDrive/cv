@@ -1,5 +1,45 @@
 import Spawn from './node_modules/@nurvus/spawn/index.js';
 
+// A wise man once said we cannot predict the future,
+// ...but we can invent it.
+//
+// Shall we invent the future together?
+//
+// (0RGSDOFCJftli;:.:. .  )
+//  T""""""""""""""""""""T
+//  |.;....,..........;..|
+//  |;;:: .  .    .      |
+//  l;;;:. :   .     ..  ;
+//  `;;:::.: .    .     .'
+//   l;;:. ..  .     .: ;
+//   `;;::.. .    .  ; .'
+//    l;;:: .  .    /  ;
+//     \;;:. .   .,'  /
+//      `\;:.. ..'  .'
+//        `\;:.. ..'
+//          \;:. /
+//           l; f
+//           `;f'
+//            ||
+//            ;l.
+//           ;: l
+//          / ;  \
+//        ,/  :   `.
+//      ./' . :     `.
+//     /' ,'  :       \
+//    f  /  . :        i
+//   ,' ;  .  :        `.
+//   f ;  .   :      .  i
+//  .'    :   :       . `.
+//  f ,  .    ;       :  i
+//  |    :  ,/`.       : |
+//  |    ;,/;:. `.     . |
+//  |___,/;;:. . .`._____|
+// (QB0ZDOLC7itz!;:.:. .  )
+//  """"""""""""""""""""""
+//
+// The worst that can happen is we learn what
+// not to do for the next time.
 
 // document.body.style.background = '#ffffff';
     // from : https://www.eggradients.com/category/purple-gradient
@@ -36,6 +76,7 @@ Spawn({
         Spawn({
           tag: 'h1',
           children: 'John Yagiz'
+          // maybe incl @UnfocusedDrive at below
         }),
         Spawn({
           tag: 'p',
@@ -98,6 +139,7 @@ Spawn({
 
 
 
+// Consider adding a second in the backgrround but smaller...
 // Init the particles
 const x = particleground(particlesEl, {
   dotColor: '#5cbdaa',
@@ -107,4 +149,5 @@ const x = particleground(particlesEl, {
 
 
 });
+
 
