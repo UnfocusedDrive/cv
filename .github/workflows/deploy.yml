@@ -19,13 +19,13 @@ jobs:
     steps:
     - name: Login to Azure
       if: startsWith(github.ref, 'refs/tags/v')
-        uses: appleboy/ssh-action@v0.1.4
-        with:
-          username: ${{ secrets.SSH_USERNAME }}
-          host: ${{ secrets.SSH_HOST }}
-          key: ${{ secrets.SSH_KEY }}
-          script: |
-            echo 'tag release!'
+      uses: appleboy/ssh-action@v0.1.4
+      with:
+        username: ${{ secrets.SSH_USERNAME }}
+        host: ${{ secrets.SSH_HOST }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          echo 'tag release!'
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Deploy App
