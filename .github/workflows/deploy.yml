@@ -17,24 +17,16 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Login to Azure
-      if: startsWith(github.ref, 'refs/tags/v')
-      uses: appleboy/ssh-action@v0.1.4
-      with:
-        username: ${{ secrets.SSH_USERNAME }}
-        host: ${{ secrets.SSH_HOST }}
-        key: ${{ secrets.SSH_KEY }}
-        script: |
-          echo 'tag release!'
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Deploy App
+      - name: Deploy Unstable App
         uses: appleboy/ssh-action@v0.1.4
         with:
           username: ${{ secrets.SSH_USERNAME }}
           host: ${{ secrets.SSH_HOST }}
           key: ${{ secrets.SSH_KEY }}
           script: |
+            # Release build steps
             # cd /home/apps # go to app dir
             # rm -rf cv/ # wipe out app for fresh build
             # git clone https://github.com/UnfocusedDrive/cv.git # get latest commit
@@ -42,4 +34,14 @@ jobs:
             # rm -rf /var/www/my.memoryleak.ai/ # remove directory
             # mkdir /var/www/my.memoryleak.ai
             # sudo mv -i * /var/www/my.memoryleak.ai/ # move build to serve dir
-            echo 'Successfully deployed to my.memoryleak.ai'
+            # echo 'Successfully deployed to my.memoryleak.ai'
+
+            # Staging (unstable) build steps
+            cd /home/apps # go to app dir
+            rm -rf cv/ # wipe out app for fresh build
+            git clone https://github.com/UnfocusedDrive/cv.git # get latest commit
+            cd cv # go to app dir
+            rm -rf /var/www/my.memoryleak.ai/unstable # remove directory
+            mkdir /var/www/my.memoryleak.ai/unstable
+            sudo mv -i * /var/www/my.memoryleak.ai/unstable # move build to serve dir
+            echo 'Successfully deployed to my.memoryleak.ai/unstable'
