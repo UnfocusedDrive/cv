@@ -1,5 +1,8 @@
 import Spawn from './node_modules/@nurvus/spawn/index.js';
 
+//
+// CV - John Yagiz - Front-End Engineer
+//
 // A wise man once said we cannot predict the future,
 // ...but we can invent it.
 //
@@ -41,10 +44,10 @@ import Spawn from './node_modules/@nurvus/spawn/index.js';
 // The worst that can happen is we learn what
 // not to do for the next time.
 
-// document.body.style.background = '#ffffff';
-    // from : https://www.eggradients.com/category/purple-gradient
-    document.body.style.backgroundColor = '#a4508b';
-    document.body.style.backgroundImage = 'linear-gradient(326deg, #a4508b 0%, #5f0a87 74%)';
+
+// Gradient Reference : https://www.eggradients.com/category/purple-gradient
+document.body.style.backgroundColor = '#a4508b';
+document.body.style.backgroundImage = 'linear-gradient(326deg, #a4508b 0%, #5f0a87 74%)';
 
 const particlesEl = Spawn({
   parentEl: document.body,
@@ -82,14 +85,16 @@ Spawn({
           tag: 'p',
           children: 'Front-End Engineer, Design Systems'
         }),
+        // IDEA: Provide links to Github, CodePen, Linkedin
+        // Swap to DOWNLOAD when file is ready to share
+        // children: 'Download Resume',
         Spawn({
-          tag: 'a',
-          href: 'https://www.linkedin.com/in/john-yagiz-29413224/',
           className: 'btn',
-          // IDEA: Provide links to Github, CodePen, Linkedin
-          // Swap to DOWNLOAD when file is ready to share
-          // children: 'Download Resume',
-          children: 'Linkedin',
+          tag: 'a',
+          // href: 'https://www.linkedin.com/in/john-yagiz-29413224/',
+          // children: 'Linkedin',
+          href: 'https://github.com/UnfocusedDrive',
+          children: 'GitHub',
           events: {
             mouseenter: (e, el) => {
               el.style.backgroundColor = '#ffffff';
@@ -126,28 +131,8 @@ Spawn({
   ]
 });
 
-// const el = Spawn({
-//   parentEl: document.body,
-//   className: 'particles',
-//   style: {
-//     width: '100%',
-//     height: '100%',
-//     overflow: 'hidden'
-//   },
-// });
-
-
-
-
-// Consider adding a second in the backgrround but smaller...
-// Init the particles
+// Consider adding a second particles layer...
 const x = particleground(particlesEl, {
   dotColor: '#5cbdaa',
-  // lineColor: '#5cbdaa'
-  // dotColor: '#4370a3',
   lineColor: '#43a390'
-
-
 });
-
-

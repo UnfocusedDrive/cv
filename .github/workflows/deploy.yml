@@ -26,22 +26,22 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            # Release build steps
-            # cd /home/apps # go to app dir
-            # rm -rf cv/ # wipe out app for fresh build
-            # git clone https://github.com/UnfocusedDrive/cv.git # get latest commit
-            # cd cv # go to app dir
-            # rm -rf /var/www/my.memoryleak.ai/ # remove directory
-            # mkdir /var/www/my.memoryleak.ai
-            # sudo mv -i * /var/www/my.memoryleak.ai/ # move build to serve dir
-            # echo 'Successfully deployed to my.memoryleak.ai'
-
-            # Staging (unstable) build steps
+            Release build steps
             cd /home/apps # go to app dir
             rm -rf cv/ # wipe out app for fresh build
             git clone https://github.com/UnfocusedDrive/cv.git # get latest commit
             cd cv # go to app dir
-            rm -rf /var/www/my.memoryleak.ai/unstable # remove directory
-            mkdir /var/www/my.memoryleak.ai/unstable
-            sudo mv -i * /var/www/my.memoryleak.ai/unstable # move build to serve dir
-            echo 'Successfully deployed to my.memoryleak.ai/unstable'
+            rm -rf /var/www/my.memoryleak.ai/ # remove directory
+            mkdir /var/www/my.memoryleak.ai
+            sudo mv -i * /var/www/my.memoryleak.ai/ # move build to serve dir
+            echo 'Successfully deployed to my.memoryleak.ai'
+
+            ## Staging (unstable) build steps
+            #cd /home/apps # go to app dir
+            #rm -rf cv/ # wipe out app for fresh build
+            #git clone https://github.com/UnfocusedDrive/cv.git # get latest commit
+            #cd cv # go to app dir
+            #rm -rf /var/www/my.memoryleak.ai/unstable # remove directory
+            #mkdir /var/www/my.memoryleak.ai/unstable
+            #sudo mv -i * /var/www/my.memoryleak.ai/unstable # move build to serve dir
+            #echo 'Successfully deployed to my.memoryleak.ai/unstable'
