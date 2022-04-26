@@ -41,7 +41,15 @@ jobs:
             rm -rf cv/ # wipe out app for fresh build
             git clone https://github.com/UnfocusedDrive/cv.git # get latest commit
             cd cv # go to app dir
-            rm -rf /var/www/my.memoryleak.ai/unstable # remove directory
-            mkdir /var/www/my.memoryleak.ai/unstable
-            sudo mv -i * /var/www/my.memoryleak.ai/unstable # move build to serve dir
-            echo 'Successfully deployed to my.memoryleak.ai/unstable'
+
+            # Staging
+            rm -rf /var/www/unstable.memoryleak.ai/cv # remove directory
+            mkdir /var/www/unstable.memoryleak.ai/cv
+            sudo mv -i * /var/www/unstable.memoryleak.ai/cv # move build to serve dir
+            echo 'Successfully deployed to unstable.memoryleak.ai/cv'
+
+            # Production
+            # rm -rf /var/www/my.memoryleak.ai/unstable # remove directory
+            # mkdir /var/www/my.memoryleak.ai/unstable
+            # sudo mv -i * /var/www/my.memoryleak.ai/unstable # move build to serve dir
+            # echo 'Successfully deployed to my.memoryleak.ai/unstable'

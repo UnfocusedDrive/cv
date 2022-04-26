@@ -43,7 +43,7 @@ import Spawn from './node_modules/@nurvus/spawn/index.js';
 //
 // The worst that can happen is we learn what
 // not to do for the next time.
-
+//
 
 // Gradient Reference : https://www.eggradients.com/category/purple-gradient
 document.body.style.backgroundColor = '#a4508b';
