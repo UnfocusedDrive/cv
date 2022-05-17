@@ -1,3 +1,6 @@
+// !!!! FIX T THE FONT ISSUE HOMEIE
+
+
 import Spawn from './node_modules/@nurvus/spawn/index.js';
 
 //
@@ -7,6 +10,8 @@ import Spawn from './node_modules/@nurvus/spawn/index.js';
 // ...but we can invent it.
 //
 // Shall we invent the future together?
+//
+// Email me with #letsgo to grab my attention.
 //
 // (0RGSDOFCJftli;:.:. .  )
 //  T""""""""""""""""""""T
@@ -40,9 +45,6 @@ import Spawn from './node_modules/@nurvus/spawn/index.js';
 //  |___,/;;:. . .`._____|
 // (QB0ZDOLC7itz!;:.:. .  )
 //  """"""""""""""""""""""
-//
-// The worst that can happen is we learn what
-// not to do for the next time.
 //
 
 // Gradient Reference : https://www.eggradients.com/category/purple-gradient
@@ -121,7 +123,11 @@ Spawn({
               el.style.borderRadius = '0';
             }
           }
-        })
+        }),
+        Spawn({
+          tag: 'p',
+          children: 'Recruitment: Use #itsforreal in the subjectg line to grab my attention'
+        }),
       ],
       style: {
         textAlign: 'center'
